@@ -291,7 +291,7 @@ def students(xlsx_file):
     last_name_col = None
     seat_col = None
     for row_index, row in enumerate(ws.iter_rows()):
-        if student_id_col and first_name_col and last_name_col:
+        if student_id_col != None and first_name_col != None and last_name_col != None:
             student_id = str(ws.cell(row=row_index+1, column=student_id_col+1).value)
             first_name = ws.cell(row=row_index+1, column=first_name_col+1).value
             last_name = ws.cell(row=row_index+1, column=last_name_col+1).value
